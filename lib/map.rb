@@ -14,11 +14,11 @@ class Map
     @path.moves.each do |move|
       go move
     end
-    puts @coordinate.distance Coordinate.new(0, 0)
   end
 
   def go(move)
     @direction = @direction.send(move.turn)
-    @coordinate.change(@direction.coefficient.axis, @direction.coefficient.value, move.distance)
+    @coordinate.change(@direction.coefficient.axis,
+                       @direction.coefficient.value * move.distance)
   end
 end

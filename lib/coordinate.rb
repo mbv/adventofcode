@@ -4,8 +4,8 @@ class Coordinate < Struct.new(:x, :y)
     self.y = y
   end
 
-  def change(axis, value, distance)
-    send("#{axis}=", send(axis).send(:+, value * distance))
+  def change(axis, value)
+    send("#{axis}=", send(axis).send(:+, value))
     self
   end
 
