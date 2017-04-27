@@ -16,6 +16,6 @@ RSpec.describe Move do
     end
   end
 
-  include_examples 'parse move', raw_move: 'R111', turn: :right, distance: 111
-  include_examples 'parse move', raw_move: 'L1', turn: :left, distance: 1
+  include_examples 'parse move', raw_move: 'R111', turn: :go_right, distance: 111
+  include_examples 'parse move', raw_move: 'L1', turn: :go_left, distance: 1
 end
